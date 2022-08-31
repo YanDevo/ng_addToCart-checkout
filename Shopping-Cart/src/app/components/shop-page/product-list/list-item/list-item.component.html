@@ -1,0 +1,16 @@
+<div class="card shadow-sm">
+    <img class="bd-placeholder-img card-img-top" width="100%" [src]= "listItem?.imageUrl">
+    
+    <div class="card-body bg-danger bg-opacity-25">
+      <p class="card-text">
+        <strong> {{listItem?.price | currency}} </strong>
+      </p>
+      <p class="card-text">{{listItem?.description}}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group col">
+          <button type="button" class="btn btn-lg btn-primary" (click)="addToCart()">Add to cart</button>
+          <button type="button" class="btn btn-lg btn-outline-secondary" ((click)="viewDetails()">Details</button>
+        </div>
+      </div>
+    </div>
+  </div>

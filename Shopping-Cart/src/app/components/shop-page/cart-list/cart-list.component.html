@@ -1,0 +1,10 @@
+<pre style="position: fixed; top: 0; left: 0; background-color: white">{{getTotal()}}@@</pre>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of cartList">
+        <app-cart-item [cartItem]="item"></app-cart-item>
+    </li>
+    <li class="list-group-item active">
+        <strong>Total:</strong> {{ getTotal() | currency}}
+    </li>
+</ul>
