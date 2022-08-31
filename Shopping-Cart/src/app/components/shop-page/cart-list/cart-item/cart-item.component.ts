@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
+import { CartListService } from '../cart-list-service';
 
 @Component({
   selector: 'app-cart-item',
@@ -8,9 +10,19 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CartItemComponent implements OnInit {
   @Input()
   cartItem: any = []
-  constructor() { }
+  length: number = 0
+  
+  
+  constructor(private cartListService : CartListService){
+  }
 
   ngOnInit(): void {
+    
+        
+  }
+
+  itemTot(){
+    return this.cartListService.currentCartItems.length;
   }
 
 }

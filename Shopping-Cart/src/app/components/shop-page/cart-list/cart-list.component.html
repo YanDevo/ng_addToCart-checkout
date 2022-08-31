@@ -1,8 +1,7 @@
-<pre style="position: fixed; top: 0; left: 0; background-color: white">{{getTotal()}}@@</pre>
-
-<ul class="list-group">
-    <li class="list-group-item" *ngFor="let item of cartList">
-        <app-cart-item [cartItem]="item"></app-cart-item>
+<div *ngIf="cartList.length === 0" class = "alert alert-warning">Cart is empty</div>
+<ul *ngIf="cartList.length > 0" class="list-group">
+    <li class="list-group-item bg-opacity-25 bg-danger">
+        <app-cart-item ></app-cart-item>
     </li>
     <li class="list-group-item active">
         <strong>Total:</strong> {{ getTotal() | currency}}

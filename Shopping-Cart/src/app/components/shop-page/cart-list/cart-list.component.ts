@@ -1,4 +1,3 @@
-import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { CartListService } from './cart-list-service';
