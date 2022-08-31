@@ -25,5 +25,15 @@ export class CartListComponent implements OnInit {
       return total+price
     })
   }
+
+  itemName(){
+    return this.cartList.map((item) => {
+      return item.name;
+    })
+  }
+
+  itemTot(){
+    return this.cartListService.currentCartItems.length;
+  }
   
 }

@@ -1,4 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(57, 106, 90);
+}
+h5 {
+    margin-bottom: 0;
+    text-align: center;
+    border-top-left-radius: 0 ;
+    border-top-right-radius: 0 ;
+}
+.item-count {
+    border-radius: 0 ;
+
+}
+div .item-count {
+    margin-bottom: 0 ;
+
+}
+.item-loop {
+    border-radius: 0 ;
+}
+
+
+div .col-4{
+    height: fit-content;
+    padding: 0;
+} 
 .card-img-top {
     height: 22vw;
     object-fit: cover;

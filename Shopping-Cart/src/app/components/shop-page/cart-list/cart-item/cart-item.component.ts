@@ -10,19 +10,14 @@ import { CartListService } from '../cart-list-service';
 export class CartItemComponent implements OnInit {
   @Input()
   cartItem: any = []
-  length: number = 0
   
   
   constructor(private cartListService : CartListService){
   }
 
-  ngOnInit(): void {
-    
-        
+  ngOnInit(): void {    
   }
 
-  itemTot(){
-    return this.cartListService.currentCartItems.length;
-  }
+  
 
 }

@@ -1,9 +1,29 @@
-<div *ngIf="cartList.length === 0" class = "alert alert-warning">Cart is empty</div>
-<ul *ngIf="cartList.length > 0" class="list-group">
-    <li class="list-group-item bg-opacity-25 bg-danger">
-        <app-cart-item ></app-cart-item>
-    </li>
-    <li class="list-group-item active">
-        <strong>Total:</strong> {{ getTotal() | currency}}
-    </li>
-</ul>
+<div *ngIf="cartList.length === 0" class="alert alert-warning">Cart is empty</div>
+
+<div *ngIf="cartList.length > 0" class=" container  cart-count text-center">
+    <h3 class="col">Checkout</h3>
+</div>
+
+<div *ngIf="cartList.length > 0" class="row container">
+    <div class="item-loop col-8">
+        <ul class=" item-loop list-group">
+            <li *ngFor="let item of cartList" class="list-group-item">
+                <app-cart-item [cartItem]="item"></app-cart-item>
+            </li>
+        </ul>
+    </div>
+    <div class=" item-count text-center col-4 bg-light">
+        <h5 class=" item-count bg-danger bg-opacity-25"><span>{{itemTot()}} </span>in your cart</h5>
+        <ul class=" item-count list-group">
+            <li class=" item-count list-group-item active">
+                <strong>Total:</strong> {{ getTotal() | currency}}
+            </li>
+            <li class="item count list-group-item">
+                <a href="mailto:customer@email.com?subject=Order%20Details$body=Thank%20you%20for%20your%20order%20of%20%20{{itemName()}}.%20Your%20total%20is%20{{getTotal() | currency}}"><button class="btn btn-success">Checkout</button></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+    
